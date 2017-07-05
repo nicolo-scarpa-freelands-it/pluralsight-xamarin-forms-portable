@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="XFPortableClassLibraryApp.MyPage">
+	<ContentPage.Content>
+        <StackLayout>
+            <BoxView
+                HorizontalOptions="FillAndExpand"
+                HeightRequest="100"
+                Color="Red"
+                x:Name="boxViewColor">
+            </BoxView>
+            <Label 
+                Text="Red">
+            </Label>
+            <Slider
+                Minimum="0"
+                Maximum="1"
+                x:Name="sliderRed"
+                ValueChanged="Handle_ValueChanged">
+            </Slider>
+            <Label 
+                Text="Green">
+            </Label>
+            <Slider
+                Minimum="0"
+                Maximum="1"
+                x:Name="sliderGreen"
+                ValueChanged="Handle_ValueChanged">
+            </Slider>
+            <Label 
+                Text="Blue">
+            </Label>
+            <Slider
+                Minimum="0"
+                Maximum="1"
+                x:Name="sliderBlue"
+                ValueChanged="Handle_ValueChanged">
+            </Slider>
+        </StackLayout>
+	</ContentPage.Content>
+</ContentPage>
