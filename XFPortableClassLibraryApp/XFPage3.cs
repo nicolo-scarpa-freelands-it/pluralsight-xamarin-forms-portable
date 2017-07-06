@@ -19,6 +19,19 @@ namespace XFPortableClassLibraryApp
                 return parent.Height / 2;
             }));
 
+            var label2 = new Label
+            {
+                Text = "More text over here"
+            };
+
+            layout.Children.Add(label2, Constraint.RelativeToView(label1, (RelativeLayout parent, View otherView) =>
+            {
+                return otherView.X + otherView.Width;
+            }), Constraint.RelativeToView(label1, (RelativeLayout parent, View otherView) =>
+            {
+                return otherView.Y + otherView.Height;
+            }));
+
             Content = layout;
         }
     }
