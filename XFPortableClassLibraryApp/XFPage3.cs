@@ -24,6 +24,11 @@ namespace XFPortableClassLibraryApp
                 Text = "More text over here"
             };
 
+            var label3 = new Label
+            {
+                Text = "Last text added"
+            };
+
             layout.Children.Add(label2, Constraint.RelativeToView(label1, (RelativeLayout parent, View otherView) =>
             {
                 return otherView.X + otherView.Width;
@@ -31,6 +36,20 @@ namespace XFPortableClassLibraryApp
             {
                 return otherView.Y + otherView.Height;
             }));
+
+            layout.Children.Add(label3, Constraint.RelativeToView(label2, (RelativeLayout parent, View otherView) =>
+            {
+                return (otherView.X + otherView.Width) - label3.Width; // label3.Width isn't calculated at this point, we have to force the layout to render again once label3 is added (see below)
+            }),
+            Constraint.RelativeToView(label1, (RelativeLayout parent, View otherView) =>
+            {
+                return otherView.Y;
+            }));
+            // Recalculate the layout once label3 has been added to the screen
+            label3.SizeChanged += (sender, e) =>
+            {
+                layout.ForceLayout();
+            };
 
             Content = layout;
         }
