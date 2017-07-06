@@ -46,9 +46,23 @@ namespace XFPortableClassLibraryApp
                 Navigation.PushAsync(tabbedPage);
             };
 
-            var button5 = new Button { Text = "" };
+            var button5 = new Button { Text = "Carousel" };
             button5.Clicked += (sender, e) =>
             {
+				var carouselPage = new CarouselPage();
+
+				carouselPage.Title = "Courses";
+
+				foreach (var course in PluralsightCourse.GetCourseList())
+				{
+					var coursePage = new CoursePageWithDataBinding();
+
+					coursePage.BindingContext = course;
+
+					carouselPage.Children.Add(coursePage);
+				}
+
+				Navigation.PushAsync(carouselPage);
             };
 
             Content = new StackLayout
