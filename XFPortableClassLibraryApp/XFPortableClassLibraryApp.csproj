@@ -44,6 +44,9 @@
     <EmbeddedResource Include="XFPage1.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Include="XFPage2.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App.xaml.cs">
@@ -66,6 +69,9 @@
     <Compile Include="CourseCell.cs" />
     <Compile Include="XFPage1.xaml.cs">
       <DependentUpon>XFPage1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="XFPage2.xaml.cs">
+      <DependentUpon>XFPage2.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
