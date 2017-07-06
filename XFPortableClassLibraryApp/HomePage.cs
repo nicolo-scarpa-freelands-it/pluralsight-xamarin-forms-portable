@@ -24,12 +24,26 @@ namespace XFPortableClassLibraryApp
             var button3 = new Button { Text = "Master/Detail (binding)" };
             button3.Clicked += (sender, e) =>
             {
-				Navigation.PushAsync(new CourseMasterDetailPageWithDataBinding());
+                Navigation.PushAsync(new CourseMasterDetailPageWithDataBinding());
             };
 
-            var button4 = new Button { Text = "" };
+            var button4 = new Button { Text = "Tabbed" };
             button4.Clicked += (sender, e) =>
             {
+                var tabbedPage = new TabbedPage();
+
+                tabbedPage.Title = "Courses";
+
+                foreach (var course in PluralsightCourse.GetCourseList())
+                {
+                    var coursePage = new CoursePageWithDataBinding();
+
+                    coursePage.BindingContext = course;
+
+                    tabbedPage.Children.Add(coursePage);
+                }
+
+                Navigation.PushAsync(tabbedPage);
             };
 
             var button5 = new Button { Text = "" };
