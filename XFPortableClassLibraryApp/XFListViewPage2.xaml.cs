@@ -22,11 +22,13 @@ namespace XFPortableClassLibraryApp
 			};
 
             var listView = new ListView();
-            listView.ItemsSource = classNames;
+            listView.ItemsSource = PluralsightCourse.GetCourseList();
 
             var cell = new DataTemplate(typeof(TextCell));
-            cell.SetBinding(TextCell.TextProperty, new Binding(".")); // "." binds directly to each item, in this case that's each string value
+            cell.SetBinding(TextCell.TextProperty, new Binding("Title"));
+            cell.SetBinding(TextCell.DetailProperty, new Binding("Author"));
             cell.SetValue(TextCell.TextColorProperty, Color.Red);
+            cell.SetValue(TextCell.DetailColorProperty, Color.Yellow);
 
             listView.ItemTemplate = cell;
 
