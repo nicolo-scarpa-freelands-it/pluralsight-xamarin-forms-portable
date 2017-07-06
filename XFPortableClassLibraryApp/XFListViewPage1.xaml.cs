@@ -12,23 +12,12 @@ namespace XFPortableClassLibraryApp
         {
             InitializeComponent();
 
-            var classNames = new[] {
-                "Building Cross Platform Apps with Xamarin Part 1",
-                "Building Cross Platform Apps with Xamarin Part 2",
-                "Building Google Glass Apps with c# and Xamarin",
-                "Android for .NET Developers"
-            };
-
             var topPadding = Device.RuntimePlatform == Device.iOS ? 20 : 0;
 
             Padding = new Thickness(0, topPadding, 0, 0);
 
             listView = new ListView();
-            //listView.ItemsSource = classNames;
-            listView.ItemsSource = 
-                from c in classNames
-                    where c.StartsWith("Building", System.StringComparison.CurrentCulture)
-                select c;
+            listView.ItemsSource = PluralsightCourse.GetCourseList();
             listView.ItemSelected += listViewItemSelectedHandler;
 
             Content = listView;

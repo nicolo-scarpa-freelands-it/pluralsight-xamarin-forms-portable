@@ -47,6 +47,7 @@
     <Compile Include="XFListViewPage1.xaml.cs">
       <DependentUpon>XFListViewPage1.xaml</DependentUpon>
     </Compile>
+    <Compile Include="PluralsightCourse.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Xamarin.Forms.Core">
