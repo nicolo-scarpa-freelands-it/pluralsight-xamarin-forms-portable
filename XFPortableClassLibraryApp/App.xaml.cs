@@ -8,7 +8,7 @@ namespace XFPortableClassLibraryApp
         {
             InitializeComponent();
 
-            MainPage = new XFPage3();
+            MainPage = new NavigationPage(new HomePage());
         }
 
         protected override void OnStart()

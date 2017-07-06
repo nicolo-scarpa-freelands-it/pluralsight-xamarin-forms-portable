@@ -74,6 +74,11 @@
       <DependentUpon>XFPage2.xaml</DependentUpon>
     </Compile>
     <Compile Include="XFPage3.cs" />
+    <Compile Include="CoursePage.cs" />
+    <Compile Include="HomePage.cs" />
+    <Compile Include="CourseMasterDetailPage.cs" />
+    <Compile Include="CourseMasterDetailPageWithDataBinding.cs" />
+    <Compile Include="CoursePageWithDataBinding.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Xamarin.Forms.Core">
