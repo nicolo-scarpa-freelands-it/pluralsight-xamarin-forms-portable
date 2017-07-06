@@ -13,7 +13,6 @@ namespace XFPortableClassLibraryApp
             InitializeComponent();
 
             var topPadding = Device.RuntimePlatform == Device.iOS ? 20 : 0;
-
             Padding = new Thickness(0, topPadding, 0, 0);
 
             listView = new ListView();

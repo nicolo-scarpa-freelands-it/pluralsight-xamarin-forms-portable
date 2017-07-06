@@ -8,7 +8,7 @@ namespace XFPortableClassLibraryApp
         {
             InitializeComponent();
 
-            MainPage = new XFListViewPage1();
+            MainPage = new XFListViewPage2();
         }
 
         protected override void OnStart()

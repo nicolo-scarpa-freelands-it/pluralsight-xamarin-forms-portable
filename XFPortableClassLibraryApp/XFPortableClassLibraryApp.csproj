@@ -35,6 +35,9 @@
     <EmbeddedResource Include="XFListViewPage1.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Include="XFListViewPage2.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App.xaml.cs">
@@ -48,6 +51,9 @@
       <DependentUpon>XFListViewPage1.xaml</DependentUpon>
     </Compile>
     <Compile Include="PluralsightCourse.cs" />
+    <Compile Include="XFListViewPage2.xaml.cs">
+      <DependentUpon>XFListViewPage2.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Xamarin.Forms.Core">
