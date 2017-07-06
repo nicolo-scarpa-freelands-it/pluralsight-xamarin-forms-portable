@@ -1,23 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="XFPortableClassLibraryApp.XFPage1">
-	<ContentPage.Content>
-		<ScrollView>
-			<StackLayout Orientation="Vertical" Padding="30" Spacing="10">
-				<Label Text="Name" Font="Large" />
-				<Entry x:Name="entryName" />
-				<Label Text="Street" Font="Large" />
-				<Entry x:Name="entryStreet" />
-				<Label Text="City" Font="Large" />
-				<Entry x:Name="entryCity" />
-				<Label Text="State" Font="Large" />
-				<Entry x:Name="entryState" />
-				<Label Text="Zip" Font="Large" />
-				<Entry x:Name="entryZip" />
-				<Label Text="Home Phone" Font="Large" />
-				<Entry x:Name="entryHomePhone" />
-				<Label Text="Cell Phone" Font="Large" />
-				<Entry x:Name="entryCellPhone" />
-			</StackLayout>
-		</ScrollView>
-	</ContentPage.Content>
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Orientation="Vertical" Padding="30" Spacing="10" HeightRequest="1200">
+                <StackLayout Orientation="Horizontal" Spacing="5">
+                    <Label Text="Name" Font="Large" VerticalOptions="End" />
+                    <Entry x:Name="entryName" HorizontalOptions="FillAndExpand" />
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" Spacing="5">
+                    <Label Text="Street" Font="Large" VerticalOptions="End" />
+                    <Entry x:Name="entryStreet" HorizontalOptions="FillAndExpand" />
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" Spacing="5">
+                    <Label Text="City" Font="Large" VerticalOptions="End" />
+                    <Entry x:Name="entryCity" HorizontalOptions="FillAndExpand" />
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" Spacing="5">
+                    <Label Text="State" Font="Large" VerticalOptions="End" />
+                    <Entry x:Name="entryState" HorizontalOptions="FillAndExpand" />
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" Spacing="5">
+                    <Label Text="Zip" Font="Large" VerticalOptions="End" />
+                    <Entry x:Name="entryZip" HorizontalOptions="FillAndExpand" />
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" Spacing="5">
+                    <Label Text="Home Phone" Font="Large" VerticalOptions="End" />
+                    <Entry x:Name="entryHomePhone" HorizontalOptions="FillAndExpand" />
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" Spacing="5">
+                    <Label Text="Cell Phone" Font="Large" VerticalOptions="End" />
+                    <Entry x:Name="entryCellPhone" HorizontalOptions="FillAndExpand" />
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
 </ContentPage>
