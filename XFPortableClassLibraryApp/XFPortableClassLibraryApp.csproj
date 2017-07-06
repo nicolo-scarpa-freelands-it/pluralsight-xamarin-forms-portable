@@ -73,6 +73,7 @@
     <Compile Include="XFPage2.xaml.cs">
       <DependentUpon>XFPage2.xaml</DependentUpon>
     </Compile>
+    <Compile Include="XFPage3.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Xamarin.Forms.Core">
